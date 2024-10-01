@@ -13,79 +13,90 @@ body, html {
   overflow: hidden;
 }
 
+/* Shooting Star General Styles */
 .shooting_star {
   position: absolute;
-  top: -10%;
-  left: -10%;
+  top: -10%; /* Start off-screen */
+  left: -10%; /* Start off-screen */
   width: 2px;
-  height: 80px;
+  height: 150px;
   background: linear-gradient(45deg, white, transparent);
   transform: rotate(45deg);
-  animation: shooting 5s ease-in-out infinite;
+  animation: shooting-star 3s ease-in-out infinite;
   opacity: 0;
 }
 
+/* Creating multiple stars at random positions */
 .shooting_star:nth-child(1) {
   animation-delay: 0.5s;
   top: 20%;
-  left: 10%;
+  left: 15%;
+  animation-duration: 3s;
 }
 
 .shooting_star:nth-child(2) {
-  animation-delay: 1s;
-  top: 30%;
-  left: 40%;
+  animation-delay: 1.2s;
+  top: 40%;
+  left: 30%;
+  animation-duration: 2.5s;
 }
 
 .shooting_star:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 2s;
   top: 10%;
-  left: 70%;
+  left: 50%;
+  animation-duration: 4s;
 }
 
 .shooting_star:nth-child(4) {
-  animation-delay: 0.2s;
-  top: 50%;
-  left: 30%;
+  animation-delay: 2.8s;
+  top: 60%;
+  left: 20%;
+  animation-duration: 3.5s;
 }
 
 .shooting_star:nth-child(5) {
-  animation-delay: 2.5s;
-  top: 40%;
-  left: 80%;
+  animation-delay: 3.5s;
+  top: 30%;
+  left: 70%;
+  animation-duration: 3.2s;
 }
 
 .shooting_star:nth-child(6) {
-  animation-delay: 3s;
-  top: 60%;
-  left: 50%;
+  animation-delay: 4.1s;
+  top: 50%;
+  left: 85%;
+  animation-duration: 3.6s;
 }
 
 .shooting_star:nth-child(7) {
-  animation-delay: 3.5s;
+  animation-delay: 1.5s;
   top: 80%;
-  left: 20%;
+  left: 40%;
+  animation-duration: 3.8s;
 }
 
 .shooting_star:nth-child(8) {
-  animation-delay: 4s;
-  top: 70%;
-  left: 60%;
+  animation-delay: 2.3s;
+  top: 20%;
+  left: 75%;
+  animation-duration: 4.5s;
 }
 
 .shooting_star:nth-child(9) {
-  animation-delay: 4.5s;
-  top: 90%;
-  left: 80%;
+  animation-delay: 3s;
+  top: 60%;
+  left: 60%;
+  animation-duration: 3s;
 }
 
-/* Keyframes for shooting stars animation */
-@keyframes shooting {
+/* Shooting star animation keyframes */
+@keyframes shooting-star {
   0% {
-    transform: translateX(0vw) translateY(0vh) rotate(45deg) scale(0.5);
+    transform: translateX(0) translateY(0) rotate(45deg) scale(0.5);
     opacity: 0;
   }
-  10% {
+  20% {
     opacity: 1;
   }
   100% {
